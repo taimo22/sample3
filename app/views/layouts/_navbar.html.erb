@@ -8,11 +8,37 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="/">Sample3</a>
+        <a class="navbar-brand" href="/">Job Chain</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                アイテムを追加
+              </a>
+            </li>
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <span class="gravatar">
+                  <img src="<%= gravatar_url(current_user, size: 20) %>" alt="" class="img-circle">
+
+                </span>
+                <%= current_user.name %>
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <%= link_to 'マイページ', user_path(current_user) %>
+                </li>
+                <li role="separator" class="divider"></li>
+                <li>
+                  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete  %>
+                </li>
+              </ul>
+            </li>
           <% else %>
             <li><%= link_to 'Login', new_user_session_path, class: 'post' %></li>
             <li><%= link_to 'Sign up',  new_user_registration_path, class: 'post' %></li>
