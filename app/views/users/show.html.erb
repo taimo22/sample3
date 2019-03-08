@@ -1,20 +1,47 @@
 <div class="user_show">
 <div class="row">
   <div class="col-md-6">
-    <div class="profile">
+    <div class="profile1">
       <strong>Name</strong><br>
     </div>
-    <h3><%= current_user.name %></h3>
-    <div class="profile">
+    <%= current_user.name %>
+    <div class="profile1">
       <strong>在籍中の学校</strong><br>
     </div>
-    <h3><%= current_user.school %></h3>
-    <div class="profile">
+    <%= current_user.school %>
+    <div class="profile1">
       <strong>自己紹介</strong><br>
     </div>
-    <h3><%= current_user.intro %></h3>
-
-
+    <%= current_user.intro %>
+  </div>
+  <div class="col-md-6">
+    <div class="user-profile">
+      <div class="icon text-center">
+        <img src="<%= gravatar_url(current_user, size: 100) %>" alt="" class="img-circle">
+      </div>
+      <div class="status text-center">
+        <ul>
+          <li>
+            <div class="status-label">Good</div>
+            <div id="good_count" class="status-value">
+              <%= @count_goods %>
+            </div>
+          </li>
+          <li>
+            <div class="status-label">Your Topic</div>
+            <div id="topic_count" class="status-value">
+              <%= @count_topics %>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center">
+      <h3>投稿歴</h3>
+    </div>
+    <div>
+      <%= render 'topics/topic', topics: @topics %>
+    </div>
   </div>
 </div>
 </div>
