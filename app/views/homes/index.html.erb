@@ -1,18 +1,20 @@
 <div class="cover">
   <div class="cover-inner">
     <div class="cover-contents">
-      <h1>学生と学生の就活情報交換の場</h1>
       <% unless user_signed_in? %>
+        <h1>学生と学生の就活情報交換の場</h1>
         <%= link_to 'Job Chainを始める', new_user_session_path, class: 'btn btn-default btn-lg' %>
-      <% end %>
-      <% if user_signed_in? %>
-        <div class="greeting">
-          <h1>Welcome to Job Chain!</h1>
-        </div>
-        <div class="start-button">
-
-        </div>
       <% end %>
     </div>
   </div>
 </div>
+<% if user_signed_in? %>
+        <div class="row">
+          <div class="col-md-3">
+            <%= render 'layouts/sidebar' %>
+          </div>
+          <div class="col-md-9">
+          <%= render 'topics/topic', topics: @topics %>
+          </div>
+        </div>
+<% end %>
