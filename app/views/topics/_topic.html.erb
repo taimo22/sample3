@@ -15,7 +15,9 @@
         <div>
           <% if current_user == topic.user %>
             <%= link_to "Delete", topic, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
-          <% end %>
+          <% else %>
+          <%= render 'ownerships/good_button', topic: topic %>
+           <% end %>
         </div>
       </div>
   <% end %>

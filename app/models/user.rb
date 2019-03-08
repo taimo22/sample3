@@ -6,4 +6,20 @@ class User < ApplicationRecord
   has_many :topics
 
   validates :name, presence: true, length: {maximum: 25 }
+
+  has_many :ownerships
+  has_many :good_topics, through: :ownerships, source: :topic
+
+  def good(topic)
+    self.ownerships.find_or_create_by(topic_id: topic.id)
+  end
+
+  def ungood(topic)
+    good = self.ownerships.find_by(topic_id: topic.id)
+    good.destroy if good
+  end
+
+  def good?(topic)
+    self.good_topics.include?(topic)
+  end
 end

@@ -8,4 +8,10 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys:[:name])
     devise_parameter_sanitizer.permit(:sign_up, keys:[:intro])
   end
+
+  private
+  def counts(user)
+    @count_topics = user.topics.count
+    @count_goods = user.good_topics.count
+  end
 end
