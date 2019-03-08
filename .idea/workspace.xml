@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6ae72750-8e3e-471a-98f9-39a8af76d76f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/homes_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/homes_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/homes/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/homes/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/topics/_topic.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/topics/_topic.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/show.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/show.html.erb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -25,7 +18,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/sample3@Development__sample3.rcov" NAME="Development: sample3 Coverage Results" MODIFIED="1552025899988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="sample3" />
+    <SUITE FILE_PATH="coverage/sample3@Development__sample3.rcov" NAME="Development: sample3 Coverage Results" MODIFIED="1552037218082" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="sample3" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -90,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+              <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -202,8 +195,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="113" />
-    <option name="y" value="382" />
+    <option name="x" value="118" />
+    <option name="y" value="198" />
     <option name="width" value="1401" />
     <option name="height" value="622" />
   </component>
@@ -513,24 +506,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1551923742701</updated>
-      <workItem from="1551923744084" duration="39856000" />
+      <workItem from="1551923744084" duration="40350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39856000" />
+    <option name="totallyTimeSpent" value="40350000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="113" y="382" width="1401" height="622" extended-state="0" />
-    <editor active="true" />
+    <frame x="118" y="198" width="1401" height="622" extended-state="0" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24944812" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24944812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" sideWeight="0.4996321" weight="0.32830188" />
       <window_info anchor="bottom" id="Version Control" sideWeight="0.4996321" weight="0.32830188" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49889624" visible="true" weight="0.3509434" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.49889624" visible="true" weight="0.3509434" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50110376" side_tool="true" weight="0.3509434" />
       <window_info anchor="bottom" id="Database Console" sideWeight="0.4996321" weight="0.32830188" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -826,7 +818,7 @@
     <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+          <caret line="39" column="9" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
         </state>
       </provider>
     </entry>
