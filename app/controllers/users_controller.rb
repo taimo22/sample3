@@ -6,4 +6,23 @@ class UsersController < ApplicationController
     @count_topics = @user.topics.count
     @topics = @user.topics.order('created_at DESC').page(params[:page])
   end
+  def edit
+    @user = current_user
+  end
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      flash[:success] = '編集完了'
+      redirect_to @user
+    else
+      flash[:danger] = '編集失敗'
+      render 'users/edit'
+    end
+  end
+  private
+
+  def user_params
+    params.require(:user).permit(:name, :intro)
+  end
+
 end
