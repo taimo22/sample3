@@ -66,9 +66,20 @@ footer {
 .user_show {
   color: black;
 }
-
+.profile {
+  border-bottom: solid 1px #C0C0C0;
+}
 /* _topic */
-.topic-list {
+.media {
   border-bottom: solid 1px #C0C0C0;
   padding: 10px;
 }
+
+/* ranking */
+.panel-footer {
+  margin-top: 5px;
+}
+.ranking .media-body {
+  height: 70px;
+}
+

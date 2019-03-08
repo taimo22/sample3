@@ -1,0 +1,34 @@
+<div class="header text-center">
+  <h1>人気Topic</h1>
+</div>
+<div class="row">
+  <div class="col-md-3">
+     <%= render 'layouts/sidebar' %>
+  </div>
+  <div class="col-md-8">
+      <% @topics.each_with_index do |topic, index| %>
+        <div class="ranking">
+          <div class="media">
+            <div class="media-top">
+            <img class="media-object img-rounded" src="<%= gravatar_url(topic.user, {size: 50}) %>" alt="">
+            </div>
+          <div class="media-body">
+            <%= link_to topic.user.name, user_path(topic.user) %> <span class="text-muted">posted at <%= topic.created_at %></span>
+            <div>
+              <p><%= topic.content %></p>
+            </div>
+            <div>
+              <% unless current_user == topic.user %>
+                <%= render 'ownerships/good_button', topic: topic %>
+              <% end %>
+            </div>
+          </div>
+            <div class="panel-footer">
+              <p class="text-center"><%= index+1 %>位: <%= @ranking_counts[topic.id] %> Good</p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

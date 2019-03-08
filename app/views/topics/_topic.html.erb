@@ -4,7 +4,7 @@
 <ul class="topic-list">
   <% topics.each do |topic| %>
     <div class="media">
-      <div class="media-top"></div>
+      <div class="media-top">
         <img class="media-object img-rounded" src="<%= gravatar_url(topic.user, {size: 50}) %>" alt="">
       </div>
       <div class="media-body">
@@ -19,6 +19,7 @@
           <%= render 'ownerships/good_button', topic: topic %>
            <% end %>
         </div>
+      </div>
       </div>
   <% end %>
   <%= paginate topics %>

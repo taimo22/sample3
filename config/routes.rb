@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   resources :topics, only: [:new, :create, :destroy]
 
   resources :ownerships, only: [:create, :destroy]
+  get 'rankings/good', to: 'rankings#good'
 end
