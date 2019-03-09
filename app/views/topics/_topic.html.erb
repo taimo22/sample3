@@ -4,6 +4,7 @@
     <div class="media">
       <div class="media-top">
         <img class="media-object img-rounded" src="<%= gravatar_url(topic.user, {size: 50}) %>" alt="">
+        Title: <strong><%= topic.name %></strong>
       </div>
       <div class="media-body">
         <%= link_to topic.user.name, user_path(topic.user) %> <span class="text-muted">posted at <%= topic.created_at %></span>
@@ -12,7 +13,7 @@
         </div>
         <div>
           <% if current_user == topic.user %>
-            <%= link_to "Delete", topic, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
+            <%= link_to "削除", topic, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
           <% else %>
           <%= render 'ownerships/good_button', topic: topic %>
            <% end %>

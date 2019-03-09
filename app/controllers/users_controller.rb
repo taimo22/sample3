@@ -9,20 +9,23 @@ class UsersController < ApplicationController
   def edit
     @user = current_user
   end
+  def job_edit
+    @user = current_user
+  end
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
-      flash[:success] = '編集完了'
+      flash[:notice] = '編集完了'
       redirect_to @user
     else
-      flash[:danger] = '編集失敗'
+      flash[:alert] = '編集失敗'
       render 'users/edit'
     end
   end
   private
 
   def user_params
-    params.require(:user).permit(:name, :intro)
+    params.require(:user).permit(:name, :intro, :job)
   end
 
 end

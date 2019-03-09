@@ -8,7 +8,7 @@
           <%= render "devise/shared/error_messages", resource: resource %>
 
           <div class="form-group">
-            <%= f.label :name, '名前' %><br/>
+            <%= f.label :name, 'ユーザ名' %><br/>
             <%= f.text_field :name, class: 'form-control' %>
           </div>
 
@@ -40,7 +40,7 @@
           </div>
         <% end %>
         <div>
-        If you have already signed up, please <%= render "devise/shared/links" %>
+        アカウント登録済みなら <%= render "devise/shared/links" %>
         </div>
       </div>
     </div>

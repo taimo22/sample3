@@ -6,9 +6,13 @@ class User < ApplicationRecord
   has_many :topics
 
   validates :name, presence: true, length: {maximum: 25 }
+  validates :intro, presence: true, length: {maximum: 500}
+  validates :job, presence:  true, length: {maximum: 25}
+  validates :school, presence: true, length: {maximum: 25}
+
 
   has_many :ownerships
-  has_many :good_topics, through: :ownerships, source: :topic
+  has_many :good_topics, through: :ownerships, source: :topic, dependent: :destroy
 
   def good(topic)
     self.ownerships.find_or_create_by(topic_id: topic.id)

@@ -2,12 +2,12 @@
   <% if current_user.good?(topic) %>
     <%= form_for(topic.ownerships.find_by(user_id: current_user.id), html: {method: :delete}) do %>
       <%= hidden_field_tag :topic_id, topic.id %>
-      <%= submit_tag 'noGood', class: 'btn btn-danger btn-xs' %>
+      <%= submit_tag 'Apathy', class: 'btn btn-danger btn-xs' %>
     <% end %>
   <%else %>
       <%= form_for(topic.ownerships.build) do %>
         <%= hidden_field_tag :topic_id, topic.id %>
-        <%= submit_tag 'Good', class: 'btn btn-primary btn-xs' %>
+        <%= submit_tag 'Empathy', class: 'btn btn-primary btn-xs' %>
       <% end %>
   <% end %>
 

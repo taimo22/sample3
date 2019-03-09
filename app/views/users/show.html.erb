@@ -2,17 +2,21 @@
 <div class="row">
   <div class="col-md-6">
     <div class="profile1">
-      <strong>Name</strong><br>
+      <strong>ユーザ名</strong><br>
     </div>
-    <%= current_user.name %>
+    <%= @user.name %>
     <div class="profile1">
-      <strong>在籍中の学校</strong><br>
+      <strong>在籍している大学or専門学校</strong><br>
     </div>
-    <%= current_user.school %>
+    <%= @user.school %>
+    <div class="profile1">
+      <strong>志望業界または企業・職種</strong> <%= link_to '編集',  job_edit_user_path, class: 'btn btn-default btn-xs' %><br>
+    </div>
+    <%= @user.job %>
     <div class="profile1">
       <strong>自己紹介</strong> <%= link_to '編集',  edit_user_path, class: 'btn btn-default btn-xs' %><br>
     </div>
-    <%= current_user.intro %>
+    <%= @user.intro %>
   </div>
   <div class="col-md-6">
     <div class="user-profile">
@@ -22,7 +26,7 @@
       <div class="status text-center">
         <ul>
           <li>
-            <div class="status-label">Good</div>
+            <div class="status-label">Empathy</div>
             <div id="good_count" class="status-value">
               <%= @count_goods %>
             </div>
