@@ -1,50 +1,55 @@
 <header>
-  <nav class="navbar navbar-inverse navbar-static-top">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand" href="/">Job Chain</a>
-      </div>
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <% if user_signed_in? %>
-            <li>
-              <%= link_to rankings_good_path do %>
-                <span class="glyphicon glyphicon-signal" ></span>
-                Ranking
-              <% end %>
-            </li>
 
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      <div class="collapse navbar-collapse justify-content-end" id="bs-example-navbar-collapse-1">
+        <ul class="navbar-nav ">
+          <% if user_signed_in? %>
+
+
+
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false">
                 <span class="gravatar">
                   <img src="<%= gravatar_url(current_user, size: 20) %>" alt="" class="img-circle">
-
                 </span>
                 <%= current_user.name %>
-                <span class="caret"></span>
               </a>
-              <ul class="dropdown-menu">
-                <li>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item">
                   <%= link_to 'マイページ', user_path(current_user) %>
-                </li>
-                <li role="separator" class="divider"></li>
-                <li>
+                </a>
+                <a class="dropdown-item">
                   <%= link_to 'ログアウト', destroy_user_session_path, method: :delete  %>
-                </li>
-              </ul>
+                </a>
+              </div>
             </li>
+
+            <li class="nav-link text-light">
+              <i class="fas fa-signal"></i> <a class="nav-ranking"><%= link_to 'Ranking',rankings_good_path  %></a>
+            </li>
+
+
+            <li class="nav-link text-light">
+              <i class="fas fa-pen"></i> <%= link_to 'Topic投稿',new_topic_path %>
+            </li>
+
+
+
           <% else %>
-            <li><%= link_to 'Login', new_user_session_path, class: 'post' %></li>
-            <li><%= link_to 'Sign up',  new_user_registration_path, class: 'post' %></li>
+            <li class="nav-link">
+            <a class="dropdown-menu"><%= link_to 'Login', new_user_session_path, class: 'post' %></a>
+            </li>
+            <li class="nav-link">
+            <a class="dropdown-menu"><%= link_to 'Sign up',  new_user_registration_path, class: 'post' %></a>
+            </li>
           <% end %>
         </ul>
       </div>
-    </div>
   </nav>
 </header>
+

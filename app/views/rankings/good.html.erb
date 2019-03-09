@@ -2,16 +2,12 @@
   <h1>人気Topic</h1>
 </div>
 <div class="row">
-  <div class="col-md-3">
-     <%= render 'layouts/sidebar' %>
-  </div>
-  <div class="col-md-8">
+  <div class="offset-2 col-8">
       <% @topics.each_with_index do |topic, index| %>
         <div class="ranking">
           <div class="media">
-            <div class="media-top">
-            <img class="media-object img-rounded" src="<%= gravatar_url(topic.user, {size: 50}) %>" alt="">
-            </div>
+
+            <img class="mr-3 img-rounded" src="<%= gravatar_url(topic.user, {size: 50}) %>" alt="">
           <div class="media-body">
             <%= link_to topic.user.name, user_path(topic.user) %> <span class="text-muted">posted at <%= topic.created_at %></span>
             <div>
@@ -23,7 +19,7 @@
               <% end %>
             </div>
           </div>
-            <div class="panel-footer">
+            <div class="card-footer">
               <p class="text-center"><%= index+1 %>位: <%= @ranking_counts[topic.id] %> Empathy</p>
             </div>
           </div>

@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザ
+      topic: Topic
+    attributes:
+      user:
+        email: email
+        password: パスワード
+        name: イベント内容
+        intro: 自己紹介
+        job: 志望している業界または企業or職種
+        school: 在籍している大学or専門学校
+      topic:
+        email: email
+        name: Title
+        content: Topic
+

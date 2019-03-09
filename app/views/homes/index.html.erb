@@ -3,7 +3,7 @@
     <div class="cover-contents">
       <% unless user_signed_in? %>
         <h1>就活生のための掲示板</h1>
-        <%= link_to 'Job Chainを始める', new_user_session_path, class: 'btn btn-default btn-lg' %>
+        <%= link_to 'Job Chainを始める', new_user_session_path, class: 'btn btn-dark btn-lg' %>
       <% end %>
     </div>
   </div>
@@ -13,10 +13,8 @@
     <h1>Home</h1>
   </div>
         <div class="row">
-          <div class="col-md-3">
-            <%= render 'layouts/sidebar' %>
-          </div>
-          <div class="col-md-9">
+
+          <div class="offset-2 col-8">
           <%= render 'topics/topic', topics: @topics %>
           </div>
         </div>
