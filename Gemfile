@@ -64,7 +64,7 @@ gem "dotenv-rails"
 
 gem 'kaminari'
 
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', ">= 3.4.1"
 
 gem 'devise'
 
