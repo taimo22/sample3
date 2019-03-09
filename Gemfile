@@ -64,12 +64,10 @@ gem "dotenv-rails"
 
 gem 'kaminari'
 
-gem 'bootstrap-sass', ">= 3.4.1"
+gem 'bootstrap-sass', ">= 3.3.7"
 
 gem 'devise'
-gem 'sassc', '>= 2.0.0'
 gem 'jquery-rails'
-gem 'sassc-rails', '~> 2.1'
 
 group :production do
   gem 'pg', '0.21.0'
