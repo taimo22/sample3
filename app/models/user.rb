@@ -6,8 +6,8 @@ class User < ApplicationRecord
   has_many :topics
 
   validates :name, presence: true, length: {maximum: 25 }
-  validates :intro, presence: true, length: {maximum: 500}
-  validates :job, presence:  true, length: {maximum: 25}
+  validates :intro, length: {maximum: 500}
+  validates :job, length: {maximum: 25}
   validates :school, presence: true, length: {maximum: 25}
 
 
